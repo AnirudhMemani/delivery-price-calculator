@@ -1,6 +1,4 @@
-import pkg from "pg";
-
-const { Pool } = pkg;
+import { Pool } from "pg";
 
 const pool = new Pool({
     host: process.env.POSTGRES_HOST,
