@@ -1,4 +1,5 @@
 import express from "express";
+import "../initializeDatabase.js";
 
 const app = express();
 const port = process.env.PORT || 3000;
