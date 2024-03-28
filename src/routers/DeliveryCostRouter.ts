@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { calculateDeliveryCost } from "../controllers/DeliveryCostController.js";
+import { getTotalDeliveryCost } from "../controllers/DeliveryCostController.js";
 
 const router = Router();
 
-router.get("/delivery-cost", calculateDeliveryCost);
+router.get("/delivery-cost", getTotalDeliveryCost);
 
 export default router;

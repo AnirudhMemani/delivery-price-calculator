@@ -1,9 +1,9 @@
 export interface IPricingModel {
     id: number;
-    organizationId: number;
-    itemId: number;
+    organization_id: number | null;
+    item_id: number | null;
     zone: string;
-    baseDistanceInKm: number;
-    kmPrice: number;
-    fixPrice: number;
+    base_distance_in_km: number;
+    km_price: number;
+    fix_price: number;
 }

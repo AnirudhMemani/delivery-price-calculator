@@ -10,7 +10,7 @@ const deliveryCostRequestSchema = z.object({
     item_type: z.enum(["perishable", "non-perishable"]),
 });
 
-export const calculateDeliveryCost = expressAsyncHandler(async (req, res) => {
+export const getTotalDeliveryCost = expressAsyncHandler(async (req, res) => {
     const parsedInput = deliveryCostRequestSchema.safeParse(req.body);
 
     if (!parsedInput.success) {
