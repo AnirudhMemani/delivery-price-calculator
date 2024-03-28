@@ -3,6 +3,6 @@ import { getTotalDeliveryCost } from "../controllers/DeliveryCostController.js";
 
 const router = Router();
 
-router.get("/delivery-cost", getTotalDeliveryCost);
+router.post("/delivery-cost", getTotalDeliveryCost);
 
 export default router;
