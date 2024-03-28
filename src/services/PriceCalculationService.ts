@@ -52,7 +52,7 @@ export class PriceCalculationService {
             });
 
         if (!pricingData) {
-            new ResourceNotFoundError("Invalid pricing configuration");
+            new ResourceNotFoundError("Pricing data not available");
         }
 
         return pricingData!;
