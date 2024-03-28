@@ -19,13 +19,16 @@ export const calculateDeliveryCost = expressAsyncHandler(async (req, res) => {
     } else {
         const { zone, organization_id, total_distance, item_type } =
             parsedInput.data;
+
         const priceCalculationService = new PriceCalculationService();
+
         const price = await priceCalculationService.calculateDeliveryPrice(
             zone,
             organization_id,
             total_distance,
             item_type
         );
+
         res.status(200).json({
             total_price: price,
         });

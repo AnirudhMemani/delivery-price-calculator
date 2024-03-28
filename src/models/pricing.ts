@@ -1,4 +1,4 @@
-export interface Pricing {
+export interface IPricingModel {
     id: number;
     organizationId: number;
     itemId: number;

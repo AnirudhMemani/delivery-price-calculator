@@ -12,12 +12,6 @@ export class BadRequestException {
     }
 }
 
-export class ConfigException {
-    constructor(message: string = HTTPMessages.CONFLICT) {
-        throw createError(HTTPStatusCode.Conflict, message);
-    }
-}
-
 export class ResourceNotFoundError {
     constructor(message: string = HTTPMessages.NOT_FOUND) {
         throw createError(HTTPStatusCode.NotFound, message);
@@ -39,18 +33,6 @@ export class ForbiddenError {
 export class InternalServerError {
     constructor(message: string = HTTPMessages.INTERNAL_SERVER_ERROR) {
         throw createError(HTTPStatusCode.InternalServerError, message);
-    }
-}
-
-export class SessionExpiredError {
-    constructor(message: string = HTTPMessages.SESSION_EXPIRED) {
-        throw createError(HTTPStatusCode.Unauthorized, message);
-    }
-}
-
-export class EnvironmentVariableNotDefinedException {
-    constructor(message: string = HTTPMessages.ENV_VARIABLE_NOT_DEFINED) {
-        throw createError(HTTPStatusCode.NotFound, message);
     }
 }
 
